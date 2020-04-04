@@ -1,0 +1,134 @@
+* {
+    font-family: 'CiscoSans', Arial, Helvetica, sans-serif;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-weight: 350;
+    margin-bottom: 10px;
+}
+h4 {
+    font-size: 1.3em;
+    line-height: 1.2em;
+    font-weight: 350;
+    margin-bottom: 10px;
+}
+.btn {
+    display: inline-block;
+    background: #00A0D1;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: white;
+    font-size: .9em;
+    font-weight: 350;
+    &:hover {
+        background: #0175A2;
+        cursor: pointer;
+    }
+}
+
+.container {
+    padding: 30px;
+}
+
+.calendar {
+    width: 4420px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;;
+    .times {
+        display: flex;
+        position: relative;
+        left: 100px;
+        width: 4320px;
+        margin-bottom: 10px;
+        .time {
+            font-size: .7em;
+            color: grey;
+            min-width: 180px;
+        }
+    }
+    .row {
+        position: relative;
+        display: flex;
+        background: #F8F8F8;
+        margin-bottom: 5px;
+        overflow: hidden;
+        .date-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 20px;
+            padding: 15px;
+            width: 80px;
+            .day {
+                font-size: .9em;
+            }
+            .date {
+                font-size: 3em;
+            }
+        }
+        .sessions {
+            min-height: 100%;
+        }
+        .blue-line {
+            height: 100%;
+            width: 3px;
+            background: #00BCEB;
+            position: absolute;
+            left: 50px;
+            &:after {
+                content: '';
+                width: 12px;
+                height: 12px;
+                background: #00BCEB;
+                position: absolute;
+                left: -4px;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+.session-creator {
+    display: flex;
+    .current-sessions {
+        flex: 1;
+
+        .sessions {
+            background: #F8F8F8;
+            width: 300px;
+            padding: 10px;
+            .session {
+                background: white;
+                width: 100%;
+                padding: 10px;
+                &:not(:last-of-type) {
+                    margin-bottom: 10px;
+                }
+                p { 
+                    margin-bottom: 5px;
+                }
+                .date {
+                    font-size: .8em;
+                    color: #535759;
+                    font-weight: 350;
+                }
+            }
+        }
+    }
+    .new-session {
+        flex: 1;
+        .input-box {
+            margin-bottom: 10px;
+            label {
+                width: 40px;
+                display: inline-block;
+                color: #535759;
+                font-weight: 350;
+                font-size: .9em;
+            }
+        }
+    }
+
+}
