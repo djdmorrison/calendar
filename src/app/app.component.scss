@@ -1,41 +1,12 @@
-* {
-    font-family: 'CiscoSans', Arial, Helvetica, sans-serif;
-}
-h3 {
-    font-size: 1.5em;
-    line-height: 1.2em;
-    font-weight: 350;
-    margin-bottom: 10px;
-}
-h4 {
-    font-size: 1.3em;
-    line-height: 1.2em;
-    font-weight: 350;
-    margin-bottom: 10px;
-}
-.btn {
-    display: inline-block;
-    background: #00A0D1;
-    padding: 10px 15px;
-    border-radius: 25px;
-    color: white;
-    font-size: .9em;
-    font-weight: 350;
-    &:hover {
-        background: #0175A2;
-        cursor: pointer;
-    }
-}
-
 .container {
     padding: 30px;
 }
 
 .calendar {
-    width: 4420px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;;
+    margin-bottom: 50px;
+    overflow-x: auto;
     .times {
         display: flex;
         position: relative;
@@ -50,10 +21,13 @@ h4 {
     }
     .row {
         position: relative;
+        width: 4420px;
         display: flex;
         background: #F8F8F8;
-        margin-bottom: 5px;
         overflow: hidden;
+        &:not(:last-of-type) {
+            margin-bottom: 5px;
+        }
         .date-column {
             display: flex;
             flex-direction: column;

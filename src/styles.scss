@@ -1,2 +1,36 @@
 @import 'styles/reset';
 @import 'styles/fonts';
+
+* {
+    font-family: 'CiscoSans', Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100vw;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-weight: 350;
+    margin-bottom: 10px;
+}
+h4 {
+    font-size: 1.3em;
+    line-height: 1.2em;
+    font-weight: 350;
+    margin-bottom: 10px;
+}
+.btn {
+    display: inline-block;
+    background: #00A0D1;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: white;
+    font-size: .9em;
+    font-weight: 350;
+    &:hover {
+        background: #0175A2;
+        cursor: pointer;
+    }
+}
