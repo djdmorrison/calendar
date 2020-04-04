@@ -52,13 +52,16 @@ export class AppComponent implements OnInit {
         }
 
         // set blue line position
-        setInterval(() => {
-            this.blueLineStyle = {
-                left: `${(moment().hours() * 60 + moment().minutes()) * 3 + 100}px`
-            };
-        }, 1000);
+        setInterval(this.updateBlueLine, 1000);
+        this.updateBlueLine();
 
         this.refreshDays();
+    }
+
+    updateBlueLine() {
+        this.blueLineStyle = {
+            left: `${(moment().hours() * 60 + moment().minutes()) * 3 + 100}px`
+        };
     }
 
     addSession() {
