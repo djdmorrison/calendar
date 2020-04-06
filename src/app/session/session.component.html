@@ -1,5 +1,7 @@
-<div class="session" [ngStyle]="style">
-    <p class="time">{{ startTimeFormatted }}  - {{ endTimeFormatted }}</p>
+<div class="session" [ngStyle]="{left: sinceStartOfDay * 3 + 100 + 'px',
+                                width: sessionLength * 3 + 'px',
+                                top: (details.overlapping.length ? details.overlapping.length * 100 : 0)  + 'px'}">
+    <p class="time">{{ details.startTime | date:'HH:mma' | lowercase }}  - {{ details.endTime | date:'HH:mma' | lowercase }}</p>
     <p class="title">{{ details.title }}</p>
     <a class="link">View recording</a>
 </div>
